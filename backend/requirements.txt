@@ -1,0 +1,19 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+psycopg2-binary
+celery[redis]
+python-multipart
+# ML & Data Science
+pandas
+numpy
+scikit-learn
+shap
+xgboost
+lightgbm
+# Dosya işlemleri
+aiofiles
+boto3
+google-generativeai
+xhtml2pdf
+jinja2

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        /* Temel Font Tanımlaması - Sistem Fontları */
+        body {
+            font-family: Helvetica, sans-serif;
+            color: #333333;
+            font-size: 12px;
+        }
+
+        /* Sayfa Kenar Boşlukları */
+        @page {
+            size: A4;
+            margin: 2cm;
+        }
+
+        /* Başlık Alanı */
+        .header-table {
+            width: 100%;
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        .meta-text {
+            text-align: right;
+            color: #666;
+            font-size: 10px;
+        }
+
+        /* Bölüm Başlıkları */
+        h2 {
+            font-size: 16px;
+            color: #1e293b;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 5px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Bilgi Kutuları (Tablo ile düzenledik ki kaymasın) */
+        .info-table {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .info-box {
+            background-color: #f8fafc;
+            border: 1px solid #cbd5e1;
+            padding: 10px;
+            width: 48%;
+            /* Yan yana iki kutu */
+        }
+
+        .label {
+            font-size: 10px;
+            color: #64748b;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        .value {
+            font-size: 14px;
+            font-weight: bold;
+            color: #0f172a;
+        }
+
+        /* AI Özeti Kutusu */
+        .ai-box {
+            background-color: #f0fdf4;
+            /* Açık yeşilimsi */
+            border-left: 5px solid #22c55e;
+            padding: 15px;
+            font-style: italic;
+            line-height: 1.5;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Veri Tablosu */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .data-table th {
+            background-color: #2563eb;
+            color: white;
+            padding: 8px;
+            text-align: left;
+            font-size: 11px;
+        }
+
+        .data-table td {
+            border-bottom: 1px solid #e2e8f0;
+            padding: 8px;
+            font-size: 11px;
+        }
+
+        .data-table tr:nth-child(even) {
+            background-color: #f1f5f9;
+        }
+
+        /* Footer */
+        .footer-note {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 9px;
+            color: #94a3b8;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table class="header-table">
+        <tr>
+            <td class="logo-text">XAI Analiz Raporu</td>
+            <td class="meta-text">
+                Oluşturulma Tarihi:<br>
+                {{ date }}
+            </td>
+        </tr>
+    </table>
+
+    <h2>📂 Dosya Bilgileri</h2>
+    <table class="info-table">
+        <tr>
+            <td class="info-box">
+                <div class="label">MODEL DOSYASI</div>
+                <div class="value">{{ filename_model }}</div>
+            </td>
+            <td style="width: 4%;"></td>
+            <td class="info-box">
+                <div class="label">VERİ SETİ</div>
+                <div class="value">{{ filename_data }}</div>
+            </td>
+        </tr>
+    </table>
+
+    <h2>🤖 Gemini Yapay Zeka Görüşü</h2>
+    <div class="ai-box">
+        {{ ai_explanation }}
+    </div>
+
+    <h2>📊 Kritik Faktör Analizi (Feature Importance)</h2>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th style="width: 10%;">#</th>
+                <th style="width: 60%;">Özellik Adı (Feature)</th>
+                <th style="width: 30%;">Etki Puanı (Score)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for key, value in feature_importance.items() %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ key }}</td>
+                <td>
+                    <div
+                        style="width: {{ (value * 100)|round(2) }}%; background-color: #3b82f6; height: 10px; display: inline-block; margin-right: 5px;">
+                    </div>
+                    {{ "%.4f"|format(value) }}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="footer-note">
+        Bu belge XAI SaaS Platformu tarafından otomatik olarak üretilmiştir. Rapor ID: {{ task_id }}
+    </div>
+
+</body>
+
+</html>
