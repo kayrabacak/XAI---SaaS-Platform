@@ -1,0 +1,38 @@
+:root {
+  --bg-dark: #030712;
+  --bg-card: rgba(17, 24, 39, 0.6);
+  --border-color: rgba(55, 65, 81, 0.5);
+
+  --primary-blue: #2563eb;
+  --primary-purple: #9333ea;
+
+  --text-white: #ffffff;
+  --text-gray: #9ca3af;
+
+  --gradient-main: linear-gradient(135deg, #1e3a8a 0%, #000000 100%);
+  --glass-effect: blur(12px) saturate(180%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  background-image:
+    radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(147, 51, 234, 0.15) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+/* Global Utility Classes */
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 2rem;
+}

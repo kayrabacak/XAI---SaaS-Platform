@@ -1,0 +1,191 @@
+.panel {
+    background: rgba(31, 41, 55, 0.5);
+    border: 1px solid rgba(55, 65, 81, 1);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.titleGroup h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #f3f4f6;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.subtitle {
+    color: #9ca3af;
+    font-size: 0.875rem;
+}
+
+.predictionBox {
+    background: rgba(30, 58, 138, 0.5);
+    border: 1px solid rgba(59, 130, 246, 1);
+    color: #bfdbfe;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    animation: zoomIn 0.3s ease-out;
+}
+
+.predictionLabel {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #60a5fa;
+    text-transform: uppercase;
+}
+
+.predictionValue {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.inputGroup {
+    background: rgba(17, 24, 39, 1);
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(55, 65, 81, 1);
+}
+
+.inputLabel {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #6b7280;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+}
+
+.input {
+    width: 100%;
+    background: transparent;
+    color: white;
+    font-family: monospace;
+    font-size: 1.125rem;
+    border: none;
+    border-bottom: 1px solid rgba(55, 65, 81, 1);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input:focus {
+    border-color: #3b82f6;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+}
+
+.resetBtn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    color: #9ca3af;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s;
+}
+
+.resetBtn:hover {
+    color: white;
+    background: rgba(55, 65, 81, 0.5);
+}
+
+.simulateBtn {
+    background: #2563eb;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.simulateBtn:hover {
+    background: #1d4ed8;
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.2);
+}
+
+.simulateBtn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

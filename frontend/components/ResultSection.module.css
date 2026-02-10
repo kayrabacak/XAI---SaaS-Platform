@@ -1,0 +1,159 @@
+.wrapper {
+    margin-top: 4rem;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.card {
+    background: rgba(17, 24, 39, 0.8);
+    backdrop-filter: blur(12px);
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    border: 1px solid rgba(55, 65, 81, 0.5);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(75, 85, 99, 0.5);
+}
+
+.headerLeft {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.downloadBtn {
+    background: rgba(55, 65, 81, 0.6);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(75, 85, 99, 0.6);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.downloadBtn:hover {
+    background: rgba(75, 85, 99, 0.8);
+    border-color: rgba(107, 114, 128, 0.8);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+.headerTitle {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: white;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+.aiBox {
+    background: linear-gradient(135deg, rgba(31, 41, 55, 0.6), rgba(17, 24, 39, 0.4));
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(55, 65, 81, 0.3);
+}
+
+.aiTitle {
+    color: #818cf8;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.aiText {
+    color: #e5e7eb;
+    line-height: 1.7;
+    font-size: 1.125rem;
+    font-weight: 300;
+}
+
+.chartBox {
+    background: rgba(31, 41, 55, 0.5);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(55, 65, 81, 0.3);
+}
+
+.chartTitle {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.barRow {
+    margin-bottom: 1.25rem;
+}
+
+.barLabel {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.barKey {
+    color: #d1d5db;
+    font-weight: 500;
+}
+
+.barValue {
+    color: #60a5fa;
+    font-weight: 700;
+}
+
+.barTrack {
+    height: 0.5rem;
+    width: 100%;
+    background: #374151;
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.barFill {
+    height: 100%;
+    background: linear-gradient(90deg, #3b82f6, #6366f1);
+    border-radius: 9999px;
+    width: 0;
+    transition: width 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
