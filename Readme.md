@@ -106,11 +106,3 @@ NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
 CLERK_SECRET_KEY=sk_test_...
 NEXT_PUBLIC_API_URL=http://localhost:8000
 ```
-
-## 🤝 Katkıda Bulunma
-
-1. Forklayın (Fork)
-2. Bir özellik dalı oluşturun (`git checkout -b feature/YeniOzellik`)
-3. Değişikliklerinizi commit edin (`git commit -m 'Yeni özellik eklendi'`)
-4. Dalınıza pushlayın (`git push origin feature/YeniOzellik`)
-5. Bir Pull Request oluşturun
