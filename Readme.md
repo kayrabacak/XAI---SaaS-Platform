@@ -4,7 +4,6 @@
 
 Bu proje, kullanıcıların CSV/Excel verilerini yükleyerek analiz etmelerini, görselleştirmelerini ve yapay zeka destekli içgörüler elde etmelerini sağlayan modern bir SaaS çözümüdür. Ayrıca analiz sonuçlarını profesyonel PDF raporları olarak indirebilirsiniz.
 
-![Project Banner](https://via.placeholder.com/1200x600?text=XAI+SaaS+Platform)
 
 ## 🚀 Özellikler
 
