@@ -105,3 +105,10 @@ NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
 CLERK_SECRET_KEY=sk_test_...
 NEXT_PUBLIC_API_URL=http://localhost:8000
 ```
+
+## 🤝 Contributing
+Contributions are welcome! Please fork the repository and submit a pull request.
+
+## 📝 License
+This project is licensed under the MIT License.
+
